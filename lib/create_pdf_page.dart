@@ -75,11 +75,11 @@ class _CreatePdfPageState extends State<CreatePdfPage> {
       ),
     );
 
-    //final String dir = (await getApplicationDocumentsDirectory()).path;
-    final String dir = (await getTemporaryDirectory()).path;
+    final String dir = (await getApplicationDocumentsDirectory()).path;
+    //final String dir = (await getTemporaryDirectory()).path;
     final String path = '$dir/images.pdf';
     final File file = File(path);
-    await file.writeAsBytes(pdf.save());
+    await file.writeAsBytes(pdf.save(), flush: true);
 
     // await Printing.layoutPdf(
     //     onLayout: (PdfPageFormat format) async => pdf.save());
@@ -89,8 +89,7 @@ class _CreatePdfPageState extends State<CreatePdfPage> {
     Navigator.of(context).push(
       MaterialPageRoute(
           builder: (_) => PdfViewerPage(
-                pdf: pdf,
-                path: path,
+                file: file,
                 doc: doc,
               )),
     );
@@ -137,7 +136,8 @@ class _CreatePdfPageState extends State<CreatePdfPage> {
                         padding: const EdgeInsets.all(8.0),
                         child: Text(
                           'View PDF',
-                          style: GoogleFonts.pangolin(color: Colors.white, fontSize: 24),
+                          style: GoogleFonts.pangolin(
+                              color: Colors.white, fontSize: 24),
                         ),
                       )
                     ],

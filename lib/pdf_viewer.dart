@@ -1,15 +1,20 @@
+import 'dart:io';
+
 import 'package:esys_flutter_share/esys_flutter_share.dart';
 import 'package:flutter/material.dart';
 import 'package:advance_pdf_viewer/advance_pdf_viewer.dart';
-import 'package:flutter/services.dart';
 
-class PdfViewerPage extends StatelessWidget {
-  final String path;
-  final pdf;
+class PdfViewerPage extends StatefulWidget {
   final doc;
-  const PdfViewerPage({Key key, this.path, this.doc, this.pdf})
+  final File file;
+  const PdfViewerPage({Key key,this.doc, this.file})
       : super(key: key);
 
+  @override
+  _PdfViewerPageState createState() => _PdfViewerPageState();
+}
+
+class _PdfViewerPageState extends State<PdfViewerPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -19,7 +24,7 @@ class PdfViewerPage extends StatelessWidget {
         actions: <Widget>[
           FlatButton(
               onPressed: () async {
-                final ByteData bytes = await rootBundle.load(path);
+                final bytes = (widget.file).readAsBytesSync();
                 await Share.file(
                   'PDF',
                   'imagesToPdf.pdf',
@@ -44,30 +49,9 @@ class PdfViewerPage extends StatelessWidget {
         padding: const EdgeInsets.all(8.0),
         child: Card(
           elevation: 50,
-          child: PDFViewer(document: doc),
+          child: PDFViewer(document: widget.doc),
         ),
       ),
     );
-
-    // PDFViewerScaffold(
-    //   //primary: false,
-    //   appBar: AppBar(
-    //     title: Text(''),
-    //     actions: <Widget>[
-    //       FlatButton(
-    //           onPressed: () async {
-    //             // final ByteData bytes = await rootBundle.load(path);
-    //             // await Share.file('PDF', 'relatorio.pdf',
-    //             //     bytes.buffer.asUint8List(), 'image/png',
-    //             //     text: 'My optional text.');
-    //           },
-    //           child: Icon(
-    //             Icons.email,
-    //             color: Colors.white,
-    //           ))
-    //     ],
-    //   ),
-    //   path: path,
-    // );
   }
 }
