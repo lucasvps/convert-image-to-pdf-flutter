@@ -22,7 +22,7 @@ to a PDF file and share it wherever you want.
 
 ## Design
 
-<img src='lib/github/first.jpeg' heigth='300' width='250' hspace='150' vspace='80'> <img src='lib/github/second.jpeg' heigth='300' width='250' vspace='30'> 
-<img src='lib/github/third.jpeg' heigth='300' width='250' hspace='150'> <img src='lib/github/fourth.jpeg' heigth='300' width='250'> 
-<img src='lib/github/fifth.jpeg' heigth='300' width='250' hspace='150' vspace='30'> <img src='lib/github/sixth.jpeg' heigth='300' width='250' vspace='30'>
+<img src='lib/github/first.jpeg' heigth='300' width='250' hspace='100' vspace='80'> <img src='lib/github/second.jpeg' heigth='300' width='250' vspace='30'> 
+<img src='lib/github/third.jpeg' heigth='300' width='250' hspace='100'> <img src='lib/github/fourth.jpeg' heigth='300' width='250'> 
+<img src='lib/github/fifth.jpeg' heigth='300' width='250' hspace='100' vspace='30'> <img src='lib/github/sixth.jpeg' heigth='300' width='250' vspace='30'>
 
