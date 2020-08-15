@@ -22,5 +22,7 @@ to a PDF file and share it wherever you want.
 
 ## Design
 
-[COMING SOON]
+<img src='lib/github/firstmock.png' heigth='300' width='250'> <img src='lib/github/secondemock.png' heigth='300' width='250'> 
+<img src='lib/github/thirdmock.png' heigth='300' width='250'> <img src='lib/github/fourthmock.png' heigth='300' width='250'> 
+<img src='lib/github/fifthmock.png' heigth='300' width='250'> <img src='lib/github/sixthmock.png' heigth='300' width='250'>
 
