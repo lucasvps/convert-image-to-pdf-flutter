@@ -1,16 +1,26 @@
-# image_to_pdf
+# Convert Images to a PDF File.
 
-A new Flutter project.
+This project is an App with Flutter where you can select images from your gallery, convert all of them
+to a PDF file and share it wherever you want.
 
-## Getting Started
+## Packages used :
 
-This project is a starting point for a Flutter application.
+- [Multi Image Picker](https://pub.dev/packages/multi_image_picker)
+- [Advance PDF Viewer](https://pub.dev/packages/advance_pdf_viewer)
+- [Path Provider](https://pub.dev/packages/path_provider)
+- [PDF](https://pub.dev/packages/pdf)
+- [Flutter Absolute Path](https://pub.dev/packages/flutter_absolute_path)
+- [Esys Flutter Share](https://pub.dev/packages/esys_flutter_share)
 
-A few resources to get you started if this is your first Flutter project:
+## Step By Step
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+- Create a List of Asset, and select all the images you want from the Multi Image Picker.
+- Get the path from all this itens, with the Absolute Path.
+- Create a PDF with the PDF package, and using a wrap widget, display all the images.
+- To view the pdf just call the Advance PDF Viewer function, with the document as a parameter.
+- To share the file wherever you want, use the Esys Flutter Share funcionality.
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Design
+
+[COMING SOON]
+

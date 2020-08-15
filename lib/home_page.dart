@@ -111,7 +111,7 @@ class _HomePageState extends State<HomePage> {
                                 child: Text(
                                   'Gallery',
                                   style: GoogleFonts.pangolin(
-                                      color: Colors.white, fontSize: 22),
+                                      color: Colors.white, fontSize: 16),
                                 ),
                               )
                             ],
@@ -153,7 +153,7 @@ class _HomePageState extends State<HomePage> {
                                 child: Text(
                                   'Create PDF',
                                   style: GoogleFonts.pangolin(
-                                      color: Colors.white, fontSize: 22),
+                                      color: Colors.white, fontSize: 16),
                                 ),
                               )
                             ],
@@ -189,7 +189,7 @@ class _HomePageState extends State<HomePage> {
                                 child: Text(
                                   'Remove All',
                                   style: GoogleFonts.pangolin(
-                                      color: Colors.white, fontSize: 22),
+                                      color: Colors.white, fontSize: 16),
                                 ),
                               )
                             ],
