@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:image_to_pdf/create_pdf_page.dart';
 import 'package:multi_image_picker/multi_image_picker.dart';
@@ -72,7 +73,7 @@ class _HomePageState extends State<HomePage> {
         backgroundColor: Colors.white,
         title: Text(
           "Convert Images to PDF",
-          style: GoogleFonts.pangolin(color: Colors.red, fontSize: 22),
+          style: GoogleFonts.raleway(color: Colors.redAccent[400], fontSize: 22),
         ),
         centerTitle: true,
       ),
@@ -97,14 +98,16 @@ class _HomePageState extends State<HomePage> {
                               side: BorderSide(color: Colors.white, width: 2),
                               borderRadius:
                                   BorderRadius.all(Radius.circular(16))),
-                          color: Colors.red,
+                          color: Colors.redAccent[400],
                           child: Column(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
-                              Icon(
-                                Icons.add_photo_alternate,
-                                size: MediaQuery.of(context).size.width * 0.15,
-                                color: Colors.white,
+                              Padding(
+                                padding: const EdgeInsets.all(8.0),
+                                child: SvgPicture.asset(
+                                  'lib/assets/image-file.svg',
+                                  width: MediaQuery.of(context).size.width * 0.12,
+                                ),
                               ),
                               Padding(
                                 padding: const EdgeInsets.all(8.0),
@@ -139,14 +142,16 @@ class _HomePageState extends State<HomePage> {
                               side: BorderSide(color: Colors.white, width: 2),
                               borderRadius:
                                   BorderRadius.all(Radius.circular(16))),
-                          color: Colors.red,
+                          color: Colors.redAccent[400],
                           child: Column(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
-                              Icon(
-                                Icons.picture_as_pdf,
-                                size: MediaQuery.of(context).size.width * 0.15,
-                                color: Colors.white,
+                              Padding(
+                                padding: const EdgeInsets.all(8.0),
+                                child: SvgPicture.asset(
+                                  'lib/assets/pdf2.svg',
+                                  width: MediaQuery.of(context).size.width * 0.12,
+                                ),
                               ),
                               Padding(
                                 padding: const EdgeInsets.all(8.0),
@@ -175,14 +180,16 @@ class _HomePageState extends State<HomePage> {
                               side: BorderSide(color: Colors.white, width: 2),
                               borderRadius:
                                   BorderRadius.all(Radius.circular(16))),
-                          color: Colors.red,
+                          color: Colors.redAccent[400],
                           child: Column(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
-                              Icon(
-                                Icons.clear,
-                                size: MediaQuery.of(context).size.width * 0.15,
-                                color: Colors.white,
+                              Padding(
+                                padding: const EdgeInsets.all(8.0),
+                                child: SvgPicture.asset(
+                                  'lib/assets/remove.svg',
+                                  width: MediaQuery.of(context).size.width * 0.12,
+                                ),
                               ),
                               Padding(
                                 padding: const EdgeInsets.all(8.0),
@@ -206,7 +213,7 @@ class _HomePageState extends State<HomePage> {
                   child: Text(
                     "Selected Images : ${images.length}",
                     style:
-                        GoogleFonts.pangolin(color: Colors.black, fontSize: 26),
+                        GoogleFonts.raleway(color: Colors.black, fontSize: 26),
                   ),
                 ),
               ),

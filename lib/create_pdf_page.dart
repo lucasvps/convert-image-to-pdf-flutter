@@ -3,6 +3,7 @@ import 'dart:io';
 import 'package:advance_pdf_viewer/advance_pdf_viewer.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_absolute_path/flutter_absolute_path.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:image_to_pdf/pdf_viewer.dart';
 import 'package:multi_image_picker/multi_image_picker.dart';
 import 'package:path_provider/path_provider.dart';
@@ -99,10 +100,10 @@ class _CreatePdfPageState extends State<CreatePdfPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        iconTheme: IconThemeData(color: Colors.red),
+        iconTheme: IconThemeData(color: Colors.redAccent[400]),
         title: Text(
           'View PDF',
-          style: GoogleFonts.pangolin(color: Colors.red, fontSize: 22),
+          style: GoogleFonts.raleway(color: Colors.redAccent[400], fontSize: 22),
         ),
         backgroundColor: Colors.white,
         centerTitle: true,
@@ -123,14 +124,16 @@ class _CreatePdfPageState extends State<CreatePdfPage> {
                   shape: RoundedRectangleBorder(
                       side: BorderSide(color: Colors.white, width: 2),
                       borderRadius: BorderRadius.all(Radius.circular(16))),
-                  color: Colors.red,
+                  color: Colors.redAccent[400],
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      Icon(
-                        Icons.picture_as_pdf,
-                        size: MediaQuery.of(context).size.width * 0.2,
-                        color: Colors.white,
+                      Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: SvgPicture.asset(
+                          'lib/assets/pdf2.svg',
+                          width: MediaQuery.of(context).size.width * 0.23,
+                        ),
                       ),
                       Padding(
                         padding: const EdgeInsets.all(8.0),
